@@ -43,8 +43,10 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
+  padding: 0;
 }
 img {
   display: block;
@@ -196,7 +198,7 @@ button {
   line-height: 1.07;
   letter-spacing: 0.02em;
 
-  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .hero-btn {
@@ -216,6 +218,8 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+
+  border: none;
 
   margin: 0 auto;
   display: block;
@@ -238,9 +242,17 @@ button {
 
 .features-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 24px; */
+}
+
+.features-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 .features-title {
@@ -249,6 +261,8 @@ button {
   line-height: 1.2;
 
   letter-spacing: 0.02em;
+
+  margin-bottom: 8px;
 
   color: var(--navy-blue-color);
 }
@@ -267,6 +281,7 @@ button {
 */
 
 .produce {
+  padding-top: 0;
 }
 .produce-container {
 }
@@ -284,7 +299,7 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 
   color: var(--navy-blue-color);
 }
@@ -318,6 +333,7 @@ button {
 
 .content {
   flex-grow: 1;
+  margin-top: 32px;
 }
 
 .team-title {
@@ -328,7 +344,7 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 
   color: var(--navy-blue-color);
 }
@@ -400,8 +416,7 @@ button {
 
   color: var(--navy-blue-color);
 
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .team-card-descr {
   font-size: 16px;
@@ -419,18 +434,17 @@ button {
 */
 
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
   background-color: var(--navy-blue-color);
 }
 
 .footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .footer-logo {
-  display: flex;
-  align-items: center;
-
+  display: block;
   font-family: "Raleway";
   color: var(--iris-color);
   font-weight: 800;
@@ -439,7 +453,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .footer-studio {
@@ -463,6 +477,17 @@ button {
   |============================
 */
 
+.active {
+  background-color: var(--ocean-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.portfolio-section {
+  padding-top: 96px;
+}
+
 .filters-btns {
   display: flex;
   gap: 24px;
@@ -480,6 +505,8 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+
+  padding: 12px 24px;
 
   letter-spacing: 0.04em;
 
@@ -512,6 +539,7 @@ button {
 .card-content {
   flex-grow: 1;
   padding-left: 16px;
+  padding-top: 32px;
 
   border-bottom: 1px solid var(--cornflower-color);
   border-left: 1px solid var(--cornflower-color);
@@ -527,13 +555,13 @@ button {
 
   color: var(--navy-blue-color);
 
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .project-card-descr {
   font-size: 16px;
   line-height: 1.5;
+  padding-bottom: 32px;
 
   letter-spacing: 0.02em;
 }
